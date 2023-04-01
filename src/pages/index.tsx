@@ -24,16 +24,16 @@ const FancyLinkWithImage = ({
       >
         {label}
         <ArrowRightIcon className="ml-3 mb-1 inline-block h-6 w-6 -translate-x-2 opacity-0 transition duration-500 group-hover:translate-x-0 group-hover:opacity-100" />
-        <div className="absolute top-[150%] left-1/2 -z-10 aspect-square w-56 overflow-hidden opacity-0 transition-opacity group-hover:z-20 group-hover:opacity-100">
+        <div className="absolute top-[150%] left-1/2 -z-10 aspect-square w-56 overflow-hidden opacity-0 transition-opacity duration-700 group-hover:z-20 group-hover:opacity-100">
           <div className="flex h-full flex-row">
-            <div className="h-full w-full flex-shrink-0 -translate-x-[300%] overflow-hidden transition duration-700 group-hover:translate-x-0">
+            <div className="h-full w-full flex-shrink-0 -translate-x-[500%] overflow-hidden transition duration-700 group-hover:translate-x-0">
               <Image
                 src={img}
                 alt={`image for ${label}`}
                 className="h-full w-full flex-shrink-0 scale-[180%] object-cover object-center transition duration-[1250ms] ease-in-out group-hover:scale-125"
               />
             </div>
-            <div className="h-full w-full flex-shrink-0 -translate-x-[300%] bg-slate-900 opacity-0 transition duration-500 group-hover:translate-x-0 group-hover:opacity-50" />
+            <div className="h-full w-full flex-shrink-0 -translate-x-[300%] bg-slate-900 opacity-40 transition duration-700 group-hover:translate-x-0" />
           </div>
         </div>
       </Link>
