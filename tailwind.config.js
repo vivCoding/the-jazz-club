@@ -24,8 +24,6 @@ module.exports = {
     // extend: {
     //   fontFamily: {
     //     // sans: ["Lexend", ...defaultTheme.fontFamily.serif],
-    //     // sans: ["Lora", ...defaultTheme.fontFamily.serif],
-    //     // sans: ["Playfair Display", ...defaultTheme.fontFamily.serif],
     //   },
     // },
   },
