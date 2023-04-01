@@ -24,46 +24,6 @@ body {
   }
 }
 
-@keyframes slideInLeft {
-  from {
-    transform: translate3d(-200%, 0, 0);
-    visibility: visible;
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes slideOutLeft {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    visibility: hidden;
-    transform: translate3d(-200%, 0, 0);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    scale: 1.5 1.5;
-  }
-
-  /* 50% {
-    scale: 1.45 1.45;
-  }
-  
-  50% {
-    scale: 1.45 1.45;
-  } */
-
-  to {
-    scale: 1.25 1.25;
-  }
-}
-
 @layer utilities {
   /* custom tailwind utilities */
   .animate-slow-spin {
@@ -95,20 +55,5 @@ body {
 
   .transition-sharp {
     transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-  }
-
-  .slideInLeft {
-    animation-name: slideInLeft;
-    animation-duration: 500ms;
-  }
-
-  .slideOutLeft {
-    animation-name: slideOutLeft;
-    animation-duration: 500ms;
-  }
-
-  .scaleIn {
-    animation-name: scaleIn;
-    animation-duration: 1000ms;
   }
 }

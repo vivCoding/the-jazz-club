@@ -33,7 +33,7 @@ const FancyLinkWithImage = ({
                 className="h-full w-full flex-shrink-0 scale-[180%] object-cover object-center transition duration-[1250ms] ease-in-out group-hover:scale-125"
               />
             </div>
-            <div className="h-full w-full flex-shrink-0 -translate-x-[300%] bg-slate-900 opacity-0 transition  duration-500 group-hover:translate-x-0 group-hover:opacity-50" />
+            <div className="h-full w-full flex-shrink-0 -translate-x-[300%] bg-slate-900 opacity-0 transition duration-500 group-hover:translate-x-0 group-hover:opacity-50" />
           </div>
         </div>
       </Link>
