@@ -1,0 +1,25 @@
+@keyframes spin-slow {
+  from {
+    rotate: 0deg;
+  }
+
+  50% {
+    scale: 1.4 1;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 1;
+    transform: translateY(30%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}

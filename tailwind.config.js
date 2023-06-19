@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme")
+const plugin = require("tailwindcss/plugin")
 
 module.exports = {
   content: [
@@ -27,5 +28,20 @@ module.exports = {
     //   },
     // },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ matchUtilities, theme }) => {
+      matchUtilities(
+        {
+          "animation-delay": (value) => {
+            return {
+              "animation-delay": `${value} !important`,
+            }
+          },
+        },
+        {
+          values: theme("transitionDelay"),
+        }
+      )
+    }),
+  ],
 }
