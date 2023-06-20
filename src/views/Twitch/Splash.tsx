@@ -100,9 +100,11 @@ const Splash = () => {
           className="flex items-center text-9xl font-normal transition-transform duration-300"
         >
           <h1 className="pb-5">
-            <span className="animate-rise animation-delay-[1000ms]">Hey</span>
+            <span className="animate-rise-word animation-delay-[1000ms]">
+              Hey
+            </span>
             &nbsp;
-            <span className="animate-rise animation-delay-[1500ms]">
+            <span className="animate-rise-word animation-delay-[1500ms]">
               gamers
             </span>
           </h1>
@@ -116,29 +118,31 @@ const Splash = () => {
           className="mt-1 text-9xl font-normal transition-transform duration-300"
           ref={lineTwo}
         >
-          <span className="animate-rise animation-delay-[2500ms]">Meet</span>
+          <span className="animate-rise-word animation-delay-[2500ms]">
+            Meet
+          </span>
           &nbsp;
-          <span className="animate-rise animation-delay-[2700ms]">the</span>
+          <span className="animate-rise-word animation-delay-[2700ms]">
+            the
+          </span>
           <br />
           <h1
             style={{
               opacity:
-                percentageSeen > 0.5
-                  ? percentageSeen > 0.5
-                    ? Math.max(0, 1 - ((percentageSeen - 0.5) / 0.5) * 3)
-                    : 1
+                percentageSeen > 0.55
+                  ? Math.max(0, 1 - ((percentageSeen - 0.55) / 0.55) * 3)
                   : 1,
             }}
           >
-            <span className="animate-rise text-blue-400 animation-delay-[2900ms]">
+            <span className="animate-rise-word text-blue-400 animation-delay-[2900ms]">
               new
             </span>
             &nbsp;
-            <span className="animate-rise text-blue-400 animation-delay-[3100ms]">
+            <span className="animate-rise-word text-blue-400 animation-delay-[3100ms]">
               Jazz
             </span>
             &nbsp;
-            <span className="animate-rise text-blue-400 animation-delay-[3300ms]">
+            <span className="animate-rise-word text-blue-400 animation-delay-[3300ms]">
               Club
             </span>
           </h1>
@@ -147,9 +151,9 @@ const Splash = () => {
             className="invisible mt-12 w-20 animate-bounce text-blue-400"
             style={{
               opacity:
-                percentageSeen > 0.45
-                  ? percentageSeen > 0.45
-                    ? Math.max(0, 1 - ((percentageSeen - 0.45) / 0.45) * 3)
+                percentageSeen > 0.5
+                  ? percentageSeen > 0.5
+                    ? Math.max(0, 1 - ((percentageSeen - 0.5) / 0.5) * 3)
                     : 1
                   : 1,
             }}
