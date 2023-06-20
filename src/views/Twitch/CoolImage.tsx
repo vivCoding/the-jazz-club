@@ -15,7 +15,7 @@ import layer6 from "public/images/layers/006.png"
 import layer7 from "public/images/layers/007.png"
 import layer8 from "public/images/layers/008.png"
 
-const SCALE_THRESHOLD = 0.45
+const SCALE_THRESHOLD = 0.3
 
 const CoolImage = () => {
   const { inView } = useInViewport("cool-img")
@@ -54,8 +54,8 @@ const CoolImage = () => {
             style={{
               transform: `translateY(${
                 percentageSeen < SCALE_THRESHOLD
-                  ? "-80%"
-                  : `-${80 - Math.abs(scrollStart - yPercentage) * 70}%`
+                  ? "-90%"
+                  : `-${90 - Math.abs(scrollStart - yPercentage) * 70}%`
               })`,
             }}
           />
@@ -66,8 +66,8 @@ const CoolImage = () => {
             style={{
               transform: `translateY(${
                 percentageSeen < SCALE_THRESHOLD
-                  ? "-75%"
-                  : `-${75 - Math.abs(scrollStart - yPercentage) * 65}%`
+                  ? "-85%"
+                  : `-${85 - Math.abs(scrollStart - yPercentage) * 65}%`
               })`,
             }}
           />
@@ -78,8 +78,8 @@ const CoolImage = () => {
             style={{
               transform: `translateY(${
                 percentageSeen < SCALE_THRESHOLD
-                  ? "-70%"
-                  : `-${70 - Math.abs(scrollStart - yPercentage) * 60}%`
+                  ? "-80%"
+                  : `-${80 - Math.abs(scrollStart - yPercentage) * 60}%`
               })`,
             }}
           />
@@ -90,8 +90,8 @@ const CoolImage = () => {
             style={{
               transform: `translateY(${
                 percentageSeen < SCALE_THRESHOLD
-                  ? "-65%"
-                  : `-${65 - Math.abs(scrollStart - yPercentage) * 55}%`
+                  ? "-75%"
+                  : `-${75 - Math.abs(scrollStart - yPercentage) * 55}%`
               })`,
             }}
           />
@@ -114,8 +114,8 @@ const CoolImage = () => {
             style={{
               transform: `translateY(${
                 percentageSeen < SCALE_THRESHOLD
-                  ? "-35%"
-                  : `-${35 + Math.abs(scrollStart - yPercentage) * 55}%`
+                  ? "-25%"
+                  : `-${25 + Math.abs(scrollStart - yPercentage) * 55}%`
               })`,
             }}
           />
@@ -126,8 +126,8 @@ const CoolImage = () => {
             style={{
               transform: `translateY(${
                 percentageSeen < SCALE_THRESHOLD
-                  ? "-30%"
-                  : `-${30 + Math.abs(scrollStart - yPercentage) * 60}%`
+                  ? "-20%"
+                  : `-${20 + Math.abs(scrollStart - yPercentage) * 60}%`
               })`,
             }}
           />
@@ -138,8 +138,8 @@ const CoolImage = () => {
             style={{
               transform: `translateY(${
                 percentageSeen < SCALE_THRESHOLD
-                  ? "-25%"
-                  : `-${25 + Math.abs(scrollStart - yPercentage) * 65}%`
+                  ? "-15%"
+                  : `-${15 + Math.abs(scrollStart - yPercentage) * 65}%`
               })`,
             }}
           />
@@ -150,8 +150,8 @@ const CoolImage = () => {
             style={{
               transform: `translateY(${
                 percentageSeen < SCALE_THRESHOLD
-                  ? "-20%"
-                  : `-${20 + Math.abs(scrollStart - yPercentage) * 70}%`
+                  ? "-10%"
+                  : `-${10 + Math.abs(scrollStart - yPercentage) * 70}%`
               })`,
             }}
           />
