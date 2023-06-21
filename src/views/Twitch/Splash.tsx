@@ -122,7 +122,7 @@ const Splash = () => {
     if (percentageSeen === 1 && scrollEnd === -1) {
       setScrollEnd(yPercentage)
     }
-    console.log("yo", percentageSeen)
+    // console.log("yo", percentageSeen)
   }, [percentageSeen, yPercentage, scrollStart, scrollEnd, yPos])
 
   return (
