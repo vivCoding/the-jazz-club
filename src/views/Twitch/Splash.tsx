@@ -220,20 +220,15 @@ const Splash = () => {
         // className={`${
         //   percentageSeen < 1 ? "fixed top-1/2 -translate-y-1/2" : "absolute"
         // } h-[100vh] w-full overflow-hidden`}
-        className="relative mb-[100vh] w-full border-2 border-white"
+        className="relative mb-[100vh] w-full"
       >
         <div
           // className="fixed relative origin-center"
           className={`${
-            percentageSeen < 1 ? "fixed top-1/2" : "absolute top-0 h-screen"
+            percentageSeen < 1
+              ? "fixed top-1/2 -translate-y-1/2"
+              : "absolute top-0 translate-y-[50vh]"
           } w-full`}
-          style={{
-            transform: `translateY(${
-              percentageSeen < 1
-                ? "-50%"
-                : `calc(50vh + ${Math.abs(scrollEnd - yPos) * 0}px)`
-            })`,
-          }}
         >
           <div
             className="relative"
@@ -260,7 +255,11 @@ const Splash = () => {
                     : `${
                         INITIAL_TRANSLATE -
                         INITIAL_SPREAD +
-                        Math.abs(scrollStart - yPercentage) * TRANSLATE_STRENGTH
+                        (Math.abs(scrollStart - yPercentage) +
+                          (percentageSeen === 1
+                            ? Math.abs(scrollEnd - yPercentage) * 1.5
+                            : 0)) *
+                          TRANSLATE_STRENGTH
                       }%`
                 })`,
               }}
@@ -277,7 +276,10 @@ const Splash = () => {
                         INITIAL_TRANSLATE -
                         INITIAL_SPREAD +
                         SPREAD_STEP +
-                        Math.abs(scrollStart - yPercentage) *
+                        (Math.abs(scrollStart - yPercentage) +
+                          (percentageSeen === 1
+                            ? Math.abs(scrollEnd - yPercentage) * 1.5
+                            : 0)) *
                           (TRANSLATE_STRENGTH * 0.9)
                       }%`
                 })`,
@@ -295,7 +297,10 @@ const Splash = () => {
                         INITIAL_TRANSLATE -
                         INITIAL_SPREAD +
                         SPREAD_STEP * 2 +
-                        Math.abs(scrollStart - yPercentage) *
+                        (Math.abs(scrollStart - yPercentage) +
+                          (percentageSeen === 1
+                            ? Math.abs(scrollEnd - yPercentage) * 1.5
+                            : 0)) *
                           (TRANSLATE_STRENGTH * 0.75)
                       }%`
                 })`,
@@ -313,8 +318,11 @@ const Splash = () => {
                         INITIAL_TRANSLATE -
                         INITIAL_SPREAD +
                         SPREAD_STEP * 3 +
-                        Math.abs(scrollStart - yPercentage) *
-                          (TRANSLATE_STRENGTH - TRANSLATE_STEP * 0.6)
+                        (Math.abs(scrollStart - yPercentage) +
+                          (percentageSeen === 1
+                            ? Math.abs(scrollEnd - yPercentage) * 1.5
+                            : 0)) *
+                          (TRANSLATE_STRENGTH * 0.6)
                       }%`
                 })`,
               }}
@@ -324,7 +332,12 @@ const Splash = () => {
               alt="layer"
               className="absolute top-1/2 w-full"
               style={{
-                transform: `translateY(${INITIAL_TRANSLATE}%)`,
+                transform: `translateY(${
+                  percentageSeen !== 1
+                    ? INITIAL_TRANSLATE
+                    : INITIAL_TRANSLATE +
+                      Math.abs(scrollEnd - yPercentage) * TRANSLATE_STRENGTH
+                }%)`,
               }}
             />
             <Image
@@ -333,21 +346,16 @@ const Splash = () => {
               className="absolute top-1/2 w-full"
               style={{
                 transform: `translateY(${
-                  percentageSeen === 1
-                    ? `${
-                        INITIAL_TRANSLATE +
-                        INITIAL_SPREAD -
-                        SPREAD_STEP * 3 -
-                        Math.abs(scrollStart - scrollEnd) *
-                          (TRANSLATE_STRENGTH * 0.6)
-                      }%`
-                    : percentageSeen < PARALLAX_START
+                  percentageSeen < PARALLAX_START
                     ? `${INITIAL_TRANSLATE + INITIAL_SPREAD - SPREAD_STEP * 3}%`
                     : `${
                         INITIAL_TRANSLATE +
                         INITIAL_SPREAD -
                         SPREAD_STEP * 3 -
-                        Math.abs(scrollStart - yPercentage) *
+                        (Math.abs(scrollStart - yPercentage) -
+                          (percentageSeen === 1
+                            ? Math.abs(scrollEnd - yPercentage) * 1.5
+                            : 0)) *
                           (TRANSLATE_STRENGTH * 0.6)
                       }%`
                 })`,
@@ -359,21 +367,16 @@ const Splash = () => {
               className="absolute top-1/2 w-full"
               style={{
                 transform: `translateY(${
-                  percentageSeen === 1
-                    ? `${
-                        INITIAL_TRANSLATE +
-                        INITIAL_SPREAD -
-                        SPREAD_STEP * 2 -
-                        Math.abs(scrollStart - scrollEnd) *
-                          (TRANSLATE_STRENGTH * 0.75)
-                      }%`
-                    : percentageSeen < PARALLAX_START
+                  percentageSeen < PARALLAX_START
                     ? `${INITIAL_TRANSLATE + INITIAL_SPREAD - SPREAD_STEP * 2}%`
                     : `${
                         INITIAL_TRANSLATE +
                         INITIAL_SPREAD -
                         SPREAD_STEP * 2 -
-                        Math.abs(scrollStart - yPercentage) *
+                        (Math.abs(scrollStart - yPercentage) -
+                          (percentageSeen === 1
+                            ? Math.abs(scrollEnd - yPercentage) * 1.5
+                            : 0)) *
                           (TRANSLATE_STRENGTH * 0.75)
                       }%`
                 })`,
@@ -385,21 +388,16 @@ const Splash = () => {
               className="absolute top-1/2 w-full"
               style={{
                 transform: `translateY(${
-                  percentageSeen === 1
-                    ? `${
-                        INITIAL_TRANSLATE +
-                        INITIAL_SPREAD -
-                        SPREAD_STEP -
-                        Math.abs(scrollStart - scrollEnd) *
-                          (TRANSLATE_STRENGTH * 0.9)
-                      }%`
-                    : percentageSeen < PARALLAX_START
+                  percentageSeen < PARALLAX_START
                     ? `${INITIAL_TRANSLATE + INITIAL_SPREAD - SPREAD_STEP}%`
                     : `${
                         INITIAL_TRANSLATE +
                         INITIAL_SPREAD -
                         SPREAD_STEP -
-                        Math.abs(scrollStart - yPercentage) *
+                        (Math.abs(scrollStart - yPercentage) -
+                          (percentageSeen === 1
+                            ? Math.abs(scrollEnd - yPercentage) * 1.25
+                            : 0)) *
                           (TRANSLATE_STRENGTH * 0.9)
                       }%`
                 })`,
@@ -411,18 +409,15 @@ const Splash = () => {
               className="absolute top-1/2 w-full"
               style={{
                 transform: `translateY(${
-                  percentageSeen === 1
-                    ? `${
-                        INITIAL_TRANSLATE +
-                        INITIAL_SPREAD -
-                        Math.abs(scrollStart - scrollEnd) * TRANSLATE_STRENGTH
-                      }%`
-                    : percentageSeen < PARALLAX_START
+                  percentageSeen < PARALLAX_START
                     ? `${INITIAL_TRANSLATE + INITIAL_SPREAD}%`
                     : `${
                         INITIAL_TRANSLATE +
                         INITIAL_SPREAD -
-                        Math.abs(scrollStart - yPercentage) * TRANSLATE_STRENGTH
+                        (percentageSeen === 1
+                          ? Math.abs(scrollStart - scrollEnd)
+                          : Math.abs(scrollStart - yPercentage)) *
+                          TRANSLATE_STRENGTH
                       }%`
                 })`,
               }}

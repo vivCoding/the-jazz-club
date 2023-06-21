@@ -8,7 +8,7 @@ const About = () => {
     <>
       <div
         id="about"
-        className="flex min-h-screen w-[80%] flex-col justify-center space-y-20 px-20 pb-10 text-7xl font-normal"
+        className="flex min-h-screen w-[80%] flex-col justify-center space-y-20 p-20 pb-10 text-7xl font-normal"
       >
         {/* TODO add rise to every single word */}
         <div>We created the Jazz Club with one single purpose:</div>
@@ -16,11 +16,11 @@ const About = () => {
           To feature the jazziest and snazziest lookin&apos; websites out there,
           and lorem ipsum more propaganda.
         </div>
-        <div
-          id="about-p3"
-          className="text-blue-400 transition duration-300 hover:text-white"
-        >
-          <Link href="">
+        <div id="about-p3" className="">
+          <Link
+            href=""
+            className="text-blue-400 transition duration-300 hover:text-white"
+          >
             Click Here for Nothing{" "}
             <ArrowDownIcon className="inline-block w-16 align-baseline" />
           </Link>
