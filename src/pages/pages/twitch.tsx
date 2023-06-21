@@ -9,7 +9,7 @@ export default function Twitch() {
       <div className="bg-black text-white">
         <Splash />
         {/* <div className="border-t-2 border-t-white" /> */}
-        <CoolImage />
+        {/* <CoolImage /> */}
         {/* <div className="h-[100vh] border-t-2 border-t-white" /> */}
         <About />
       </div>

@@ -8,7 +8,7 @@ const About = () => {
     <>
       <div
         id="about"
-        className="flex h-screen w-[80%] flex-col justify-center space-y-20 px-20 text-7xl font-normal"
+        className="flex min-h-screen w-[80%] flex-col justify-center space-y-20 px-20 pb-10 text-7xl font-normal"
       >
         {/* TODO add rise to every single word */}
         <div>We created the Jazz Club with one single purpose:</div>

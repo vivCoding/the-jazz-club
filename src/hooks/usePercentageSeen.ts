@@ -6,7 +6,7 @@ const usePercentageSeen = (elemId: string) => {
   const [percentageSeen, setPercentage] = useState(0)
 
   const getPercentageSeen = () => {
-    // TOOD figure out how to get elem once
+    // TODO figure out how to get elem once
     const elem = document.getElementById(elemId)
     if (!elem) return
     // Get the relevant measurements and positions
