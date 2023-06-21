@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // NOTE to disable double rerendering/console logs
+  // Disable double rerendering/console logs
   reactStrictMode: false,
-  // reactStrictMode: true,
+  // To be able to 'next export'
+  images: {
+    unoptimized: true,
+  },
 }
 
 module.exports = nextConfig
