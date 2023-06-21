@@ -85,9 +85,9 @@ const Splash = () => {
         lineOne.current.style.transform = `translateY(calc(-${
           lineOne.current.getBoundingClientRect().bottom - dbr.top
         }px - 100%))`
-        lineTwo.current.style.transform = `translateY(-${
+        lineTwo.current.style.transform = `translateY(calc(2rem - ${
           lineTwo.current.getBoundingClientRect().top - dbr.top
-        }px)`
+        }px))`
         arrowIcon.current.style.visibility = "visible"
       }
     }, 3800)
@@ -163,14 +163,15 @@ const Splash = () => {
           className="mt-1 text-9xl font-normal transition-transform duration-300"
           ref={lineTwo}
         >
-          <span className="animate-rise-word animation-delay-[2500ms]">
-            Meet
-          </span>
-          &nbsp;
-          <span className="animate-rise-word animation-delay-[2700ms]">
-            the
-          </span>
-          <br />
+          <h1>
+            <span className="animate-rise-word animation-delay-[2500ms]">
+              Meet
+            </span>
+            &nbsp;
+            <span className="animate-rise-word animation-delay-[2700ms]">
+              the
+            </span>
+          </h1>
           <h1
             style={{
               opacity:
