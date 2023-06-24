@@ -9,8 +9,6 @@ const useInViewport = (elemId: string, threshold = 0) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         setInView(true)
-      } else {
-        setInView(false)
       }
     })
   }

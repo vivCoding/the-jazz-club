@@ -85,7 +85,7 @@ const Splash = () => {
         lineOne.current.style.transform = `translateY(calc(-${
           lineOne.current.getBoundingClientRect().bottom - dbr.top
         }px - 100%))`
-        lineTwo.current.style.transform = `translateY(calc(2rem - ${
+        lineTwo.current.style.transform = `translateY(calc(10vh - ${
           lineTwo.current.getBoundingClientRect().top - dbr.top
         }px))`
         arrowIcon.current.style.visibility = "visible"
@@ -216,15 +216,8 @@ const Splash = () => {
           />
         </div>
       </div>
-      <div
-        id="cool-img"
-        // className={`${
-        //   percentageSeen < 1 ? "fixed top-1/2 -translate-y-1/2" : "absolute"
-        // } h-[100vh] w-full overflow-hidden`}
-        className="relative mb-[100vh] w-full"
-      >
+      <div id="cool-img" className="relative mb-[100vh] w-full">
         <div
-          // className="fixed relative origin-center"
           className={`${
             percentageSeen < 1
               ? "fixed top-1/2 -translate-y-1/2"

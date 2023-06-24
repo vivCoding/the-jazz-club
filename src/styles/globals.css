@@ -67,4 +67,15 @@ body {
   .animate-scale-down {
     animation: scale-down 700ms ease;
   }
+
+  .animate-arrow-in {
+    animation-name: arrow-out, arrow-in;
+    animation-duration: 100ms, 200ms;
+    animation-timing-function: ease-in, ease-in;
+    animation-delay: 0ms, 100ms;
+    animation-iteration-count: 1, 1;
+    animation-direction: alternate, normal;
+    animation-fill-mode: forwards, forwards;
+    animation-play-state: running, running;
+  }
 }
