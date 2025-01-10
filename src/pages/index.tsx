@@ -19,6 +19,7 @@ export default function Home() {
           <div className="mt-10 grid grid-cols-3 items-start">
             <FancyLink label="Def Jam" href="/pages/defjam" />
             <FancyLink label="Twitch" href="/pages/twitch" />
+            <FancyLink label="Boilermake" href="https://bmxi.vercel.app/" />
           </div>
         </div>
       </BlobBackground>
